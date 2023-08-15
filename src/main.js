@@ -18,7 +18,7 @@ const pokemonDivs = data.pokemon.map(pokemon => {
     });
     const pokemonDiv = document.createElement('div');
     pokemonDiv.className = 'tarjetaPokemon';
-    pokemonDiv.innerHTML = `<div class="card-front"><a class="namePokemon">${pokemon.name}</a><div class="card-type">${divType}</div><div class="imgpokemon"><img src="${pokemon.img}" alt=""></div><div><div class="card-back"></div>`;
+    pokemonDiv.innerHTML = `<div class="card-front"><a class="namePokemon">${pokemon.name}</a><div class="card-type">${divType}</div><div class="imgpokemon"><img src="${pokemon.img}" alt=""></div><div><div class="card-back"><div class="card-description"><p>${pokemon.about}</p></div></div>`;
     return pokemonDiv;
 });
 
