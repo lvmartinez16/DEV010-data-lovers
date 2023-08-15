@@ -14,12 +14,21 @@
     <div id="root">
       <h1 class="titulo">POKÉMON</h1>
       <nav class="nav">
-        <div>INICO</div>
-        <div>FILTRAR</div>
+        <div class="filter-buttons">
+          <label for="typeSelector">Selecciona un tipo:</label>
+          <select id="typeSelector">
+              <option value="all">Mostrar todos</option>
+              <option value="grass">Planta</option>
+              <option value="fire">Fuego</option>
+              <option value="water">Agua</option>
+              <!-- Agrega más opciones para otros tipos -->
+          </select>
+      </div>
       </nav>
     </div>
     <div id="listPokemon" class="pokemonList">
     </div>
+  
   </div>
   <script src="main.js" type="module"></script>
 </body>
