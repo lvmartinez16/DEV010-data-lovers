@@ -16,21 +16,52 @@
       <h1 class="titulo">POKÉMON</h1>
       <nav class="nav">
         <div class="filter-buttons">
-          <label for="typeSelector">Selecciona un tipo:</label>
-          <select id="typeSelector">
-              <option value="all">Mostrar todos</option>
-              <option value="grass">Planta</option>
-              <option value="fire">Fuego</option>
-              <option value="water">Agua</option>
-              <!-- Agrega más opciones para otros tipos -->
+          <label class="Selector">Selecciona un tipo:</label>
+          <select id="typeSelector" class="typeSelector">
+            <option value="all">Show all</option>
+            <option value="bug">Bug</option>
+            <option value="grass">Grass</option>
+            <option value="fire">Fire</option>
+            <option value="water">Water</option>
+            <option value="dark">Dark</option>
+            <option value="dragon">Dragon</option>
+            <option value="electric">Electric</option>
+            <option value="fairy">Fairy</option>
+            <option value="fighting">Fighting</option>
+            <option value="flying">Flying</option>
+            <option value="ghost">Ghost</option>
+            <option value="ground">Ground</option>
+            <option value="ice">Ice</option>
+            <option value="normal">Normal</option>
+            <option value="poison">Poison</option>
+            <option value="psychic">Psychic</option>
+            <option value="rock">Rock</option>
+            <option value="steel">Steel</option>
           </select>
-      </div>
+        </div>
+        <div>
+          <select id="numberSelector" >
+            <option value="type">Todos</option>
+            <option value="1type">1 tipo</option>
+            <option value="2type">2 tipos</option>
+          </select>
+        </div>
       </nav>
     </div>
     <div id="listPokemon" class="pokemonList">
     </div>
-  
+    <div class="loader" id="loader"></div>
+
+    <!-- Botón "Volver arriba" -->
+    <button id="btnVolverArriba" class="btn-volver-arriba">
+      <img src="https://cdn.icon-icons.com/icons2/851/PNG/512/Pokemon_Go_Arrow_icon-icons.com_67522.png"
+        alt="Icono Volver Arriba">
+    </button>
+
+
+
   </div>
+  <script src="data.js" type="module"></script>
   <script src="main.js" type="module"></script>
 </body>
 

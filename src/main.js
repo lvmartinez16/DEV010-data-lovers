@@ -1,29 +1,47 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
+import { cargaInicial, cargarTipo } from './data.js';
 import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
-
-console.log(example, data);
-
 
 console.log("data->", data);
+//se crea una const llamada pokemkonListDiv obteniendo el elemento id del docuemnto llamado 'listPokemon' que esta en el html
 const pokemonListDiv = document.getElementById('listPokemon');
+cargaInicial(data, pokemonListDiv);
+//console.log("divs ->", pokemonDivs);
 
-// Usa el método map() para crear un div para cada objeto de Pokémon
-const pokemonDivs = data.pokemon.map(pokemon => {
-    //console.log(pokemon);
-    let divType =``;
-    pokemon.type.map(type => {
-        divType += `<a class="type-${type}">${type}</a>`;
-    });
-    const pokemonDiv = document.createElement('div');
-    pokemonDiv.className = 'tarjetaPokemon';
-    pokemonDiv.innerHTML = `<div class="card-front"><a class="namePokemon">${pokemon.name}</a><div class="card-type">${divType}</div><div class="imgpokemon"><img src="${pokemon.img}" alt=""></div><div><div class="card-back"><div class="card-description"><p>${pokemon.about}</p></div></div>`;
-    return pokemonDiv;
-});
+window.addEventListener('change', changeSelect);
 
-// Agrega cada div de Pokémon al div principal en el DOM
-console.log("divs ->", pokemonDivs);
-pokemonDivs.forEach(pokemonDiv => {
-    pokemonListDiv.appendChild(pokemonDiv);
+
+function changeSelect() {
+    let valueFilter = document.getElementById('typeSelector');
+    //console.log("value---->>>>", valueFilter.value);
+    if (valueFilter.value != 'all') {
+        cargarTipo(pokemonListDiv, valueFilter);
+    }else {
+        // es igual a all 
+        // se ejecuta la funcion inicial que no tiene filtros
+        cargaInicial(data, pokemonListDiv);
+    }
+}
+
+
+
+
+//* botón "Volver arriba"
+//se crea una cons obteniendo el elemento btnVolverArriba del documento html
+const scrollToTopButton = document.getElementById("btnVolverArriba");
+//este evento scroll se ejecutara cada vez que el usuasrio baje la pagina, muestra el btn
+window.onscroll = function() {
+       //document.body.scrollTop > 3000 ||
+  if ( document.documentElement.scrollTop > 3000) {
+    //hace qe cuando el usuario hace scroll hacia abajo muestre el boton
+    scrollToTopButton.style.display = "block";
+  } else {
+   // de lo contrario no lo muestre
+    scrollToTopButton.style.display = "none";
+  }
+};
+
+// Hacer scroll suave al inicio cuando se hace clic en el botón
+scrollToTopButton.addEventListener("click", function() {
+ // document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 });
