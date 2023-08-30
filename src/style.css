@@ -10,6 +10,10 @@ body {
     background: linear-gradient(to right, rgb(2, 107, 226), rgb(60, 102, 186), #1fc2fe, #1fc2fe, rgb(58, 107, 197), rgb(0, 132, 248));
     ;
 }
+header {
+    margin: 20px;
+    display: contents;
+}
 
 .pokemonList {
     display: flex;
@@ -25,20 +29,9 @@ body {
 }
 
 .bg_animate {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
+   
     text-align: center;
 
-}
-
-.titulo {
-    font-size: 40px;
-    font-weight: 700;
-    margin: 20px;
-    padding: 20px;
-    text-align: center;
-    color: white;
 }
 
 .nav {
@@ -66,21 +59,21 @@ body {
 } */
 
 
+
 .tarjetaPokemon {
     width: 250px;
     border: solid 3px #DDD;
     border-radius: 13px;
     text-align: center;
-    height: 400px;
-    position: relative;
+    height: 350px;
+    /* position: relative; */
     background-image: url('/src/assets/tarjetafondo2.jpg');
-    /* background-image: url('/src/assets/tarjeta3fondo.png'); */
     background-size: 250px;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
-    cursor: default;
-    transition: all 400ms ease;
+    /* background-repeat: no-repeat; */
+    /* overflow: hidden; */
+    /* box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2); */
+    cursor: inherit;
+    transition: all 400ms ease-out;
 }
 
 /* que gire 360grado la tarjeta */
@@ -90,17 +83,18 @@ body {
 
 .namePokemon {
     display: block;
-    font-size: 17px;
-    font-weight: 700;
+    font-size: 25px;
+    font-weight: 750;
     border-radius: 13px 13px 0 0;
-    color: rgb(255, 255, 255);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(255 255 255);
+    font-family: initial;
     box-shadow: #c7a7a7 0 1px;
-    padding: 20px 62px;
+    padding: 13px 32px;
     background: rgba(0, 0, 0, 0.2);
     white-space: nowrap;
     text-transform: capitalize;
 }
+
 
 .imgpokemon {
     width: 100%;
@@ -118,17 +112,16 @@ body {
 
 .card-back {
     background-color: rgb(0, 0, 0);
-    /* transform: perspective(600px) rotateY(360deg); */
-    padding: 20px;
+    transform: perspective(600px) rotateY(360deg);
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
     opacity: 0;
-    margin-top: 50%;
+    margin-top: 47%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .card-front:hover .card-back {
@@ -145,12 +138,13 @@ body {
 
 .card-type {
     margin-top: 10px;
+    text-transform: capitalize;
 }
 
 .card-type a {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 14px;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     padding-right: 5px;
     padding-left: 5px;
     border-radius: 10px;
