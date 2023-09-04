@@ -10,22 +10,19 @@ body {
     background: linear-gradient(to right, rgb(2, 107, 226), rgb(60, 102, 186), #1fc2fe, #1fc2fe, rgb(58, 107, 197), rgb(0, 132, 248));
     ;
 }
-header {
-    margin: 20px;
-    display: contents;
-}
-
 .pokemonList {
     display: flex;
-    flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 50px;
     margin: 13px;
-    justify-content: space-between;
-    margin-bottom: 60px;
+    /* justify-content: space-between; */
+    /* margin-bottom: 60px; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
 }
 
 .bg_animate {
@@ -35,22 +32,20 @@ header {
 }
 
 .nav {
-    display: inline-block;
-    padding: 5px;
     border: 2px solid #034197;
     border-radius: 8px;
     color: antiquewhite;
-    width: 80%;
+ 
 }
 
 .banner_img img {
     width: 80%;
-    display: block;
+    /* display: block; */
 }
 
-.container {
+/* .container {
     display: grid;
-}
+} */
 
 /* 
 .root {
@@ -138,18 +133,19 @@ header {
 
 .card-type {
     margin-top: 10px;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 }
 
 .card-type a {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 14px;
-    /* text-transform: capitalize; */
+    text-transform: capitalize; 
     padding-right: 5px;
     padding-left: 5px;
     border-radius: 10px;
     color: white;
     font-weight: 800;
+    text-transform: uppercase; 
 }
 
 a.type-grass {
@@ -237,6 +233,7 @@ a.type-flying {
 a.type-poison {
     background-color: rgb(105, 5, 90);
     color: rgb(255, 255, 255);
+    
 }
 
 a.type-ground {
