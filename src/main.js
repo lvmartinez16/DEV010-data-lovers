@@ -1,9 +1,14 @@
-import { cargarTipo } from './data.js';
+import { cargarTipo, } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 //se obtiene elemn ID listPokemon' que esta en el html
 const listPokemon = document.getElementById('listPokemon');
 cargaInicial(data, listPokemon);
+const botonFiltrarAZ = document.getElementById('filtrarAZ');
+botonFiltrarAZ.addEventListener('click', filtrarPokemonAZ);
+
+/* const botonFiltrarZA = document.getElementById('filtrarZA');
+botonFiltrarZA.addEventListener('click', filtrarPokemonZA); */
 
 
 function cargaInicial(dataComplete, pokemonListDiv) {
@@ -58,9 +63,13 @@ function changeSelect() {
   } else {
     cargaInicial(data, listPokemon);
   }
-}
-cargaInicial(data, listPokemon); // Llama a cargaInicial al cargar la página 
+} cargaInicial(data, listPokemon); // Llama a cargaInicial al cargar la página 
 
+
+
+function filtrarPokemonAZ(){
+
+}
 
 
 /* BOTON SUBIR */

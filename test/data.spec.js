@@ -18,11 +18,18 @@ const filtro = "grass"; */
 });
  */
  
-describe('Tipo que escoge', () => { // Título del test
+describe('cargarTipo', () => { // Título del test
   it('debe devolver el tipo de Pokémon grass', () => { // Descripción del caso de prueba
-    
+    const selectorID="grass";
+    const data= {
+      "pokemon": [
+        {  "name": "bulbasaur","type": "grass"},
+        { "name": "ponyta", "type": "fire"},
+        { "name": "blastoise", "type": "water"},
+        
+      ]}
 
-    expect(cargarTipo).toBe('cargarTipo');
+    expect(cargarTipo(data,selectorID)).toEquals([{"name": "bulbasaur","type": "grass"}]);
   });
 });
 
