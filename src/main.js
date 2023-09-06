@@ -1,15 +1,27 @@
-import { cargarTipo, } from './data.js';
+import { cargarTipo } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 //se obtiene elemn ID listPokemon' que esta en el html
 const listPokemon = document.getElementById('listPokemon');
 cargaInicial(data, listPokemon);
-const botonFiltrarAZ = document.getElementById('filtrarAZ');
-botonFiltrarAZ.addEventListener('click', filtrarPokemonAZ);
 
-/* const botonFiltrarZA = document.getElementById('filtrarZA');
-botonFiltrarZA.addEventListener('click', filtrarPokemonZA); */
+// Obtén los botones de ordenamiento por ID
+const btnAscendente = document.getElementById('ordenAscendente');
+const btnDescendente = document.getElementById('ordenDescendente');
 
+// Agrega event listeners a los botones
+btnAscendente.addEventListener('click', () => ordenarPokemonAZ());
+btnDescendente.addEventListener('click', () => ordenarPokemonZA());
+
+function ordenarPokemonAZ() {
+  data.pokemon.sort((a, z) => a.name.localeCompare(z.name));
+  cargaInicial(data, listPokemon);
+}
+
+function ordenarPokemonZA() {
+  data.pokemon.sort((a, b) => b.name.localeCompare(a.name));
+  cargaInicial(data, listPokemon);
+}
 
 function cargaInicial(dataComplete, pokemonListDiv) {
   const pokemonDivs = dataComplete.pokemon.map(pokemon => {
@@ -35,6 +47,7 @@ function cargaInicial(dataComplete, pokemonListDiv) {
     pokemonListDiv.appendChild(pokemonDiv);
   });
 }
+
 
 window.addEventListener('change', changeSelect);
 function changeSelect() {
@@ -65,11 +78,6 @@ function changeSelect() {
   }
 } cargaInicial(data, listPokemon); // Llama a cargaInicial al cargar la página 
 
-
-
-function filtrarPokemonAZ(){
-
-}
 
 
 /* BOTON SUBIR */

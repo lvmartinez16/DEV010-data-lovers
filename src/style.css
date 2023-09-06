@@ -32,8 +32,8 @@ body {
 }
 
 .nav {
-    border: 2px solid #034197;
-    border-radius: 8px;
+    border: 3px solid #034197;
+    border-radius: 13px;
     color: antiquewhite;
  
 }
@@ -69,25 +69,35 @@ body {
     /* box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2); */
     cursor: inherit;
     transition: all 400ms ease-out;
+
+    @media (max-width: 1026px) {
+        width: 550px;
+        background-size: 550px;
+        height: 700px;
+    }
 }
 
 /* que gire 360grado la tarjeta */
-.tarjetaPokemon:hover {
+.tarjetaPokemon:hover, .tarjetaPokemon:active {
     transform: perspective(600px) rotateY(360deg);
 }
 
 .namePokemon {
-    display: block;
-    font-size: 25px;
+    /* display: block; */
+    font-size: 20px;
     font-weight: 750;
     border-radius: 13px 13px 0 0;
-    color: rgb(255 255 255);
-    font-family: initial;
+    color: rgb(255, 255, 255);
+    font-family: 'Verdana', sans-serif;
     box-shadow: #c7a7a7 0 1px;
     padding: 13px 32px;
-    background: rgba(0, 0, 0, 0.2);
+    background:  rgb(26 92 138 / 50%);
     white-space: nowrap;
     text-transform: capitalize;
+    @media(max-width:1026px) {
+        font-size: 50px;
+        font-weight: 750;
+    }
 }
 
 
@@ -97,7 +107,16 @@ body {
     object-fit: cover;
     border-radius: 10px;
     transform: translateY(112px);
-
+   
+    
+}
+@media (max-width:1026px) {
+    .imgpokemon img{
+        width: 60%;
+    }
+    .imgpokemon{
+        transform: translateY(900%);
+    }
 }
 
 /* @media (maxWidth: 1024px) {
@@ -117,23 +136,38 @@ body {
     margin-top: 47%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 11px;
+    @media(max-width:1026px) {
+        
+        margin-top: 50%;
+        font-size: 30px;
+    }
 }
 
-.card-front:hover .card-back {
+.card-front:hover .card-back, .card-front:active {
     opacity: 0.7;
 }
 
-.card-front:hover .imgpokemon {
+.card-front:hover .imgpokemon,.card-front:active {
     transform: translateY(-3%);
+    @media(max-width:1026px) {
+        transform: translateY(-4%);
+        
+    }
 }
 
-.card-front:hover .imgpokemon img {
+.card-front:hover .imgpokemon img, .card-front:active {
     width: 60%;
+     @media(max-width:1026px) {
+       width: 80%;
+    }
 }
 
 .card-type {
     margin-top: 10px;
     /* text-transform: capitalize; */
+   
+        
+    
 }
 
 .card-type a {
@@ -146,6 +180,12 @@ body {
     color: white;
     font-weight: 800;
     text-transform: uppercase; 
+
+    @media(max-width:1026px) {
+        font-size: 30px; 
+        padding-right: 10px;
+        padding-left: 10px;
+      } 
 }
 
 a.type-grass {
@@ -290,7 +330,7 @@ a.type-ground {
     padding: 0.4em 1.4em 0.3em 0.8em;
     max-width: 100%;
     box-sizing: border-box;
-    margin: 20px auto;
+    margin: 7px auto;
     appearance: none;
     border: solid 2px #034197;
     border-radius: 0.3em;
@@ -299,8 +339,30 @@ a.type-ground {
     background-repeat: no-repeat, repeat;
     background-position: right 0.7em top 50%, 0 0;
     background-size: 0.65em auto, 100%;
+    @media(max-width:1026px) {
+        font-size:24px;}
 }
 .Selector{
     font-size: 20px;
     font-family: 'Verdana', sans-serif;
+    @media(max-width:1026px) {
+        font-size:40px;
+    }
+}
+.typeBtn {
+
+    font-size: 16px;
+    font-family: 'Verdana', sans-serif;
+    color: #444;
+    padding: 0.4em 1.4em 0.3em 0.8em;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 7px auto;
+    appearance: none;
+   border: solid 2px #034197;
+    border-radius: 0.3em;
+    background-color: #fff;
+   
+    @media(max-width:1026px) {
+        font-size:24px;}
 }

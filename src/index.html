@@ -11,11 +11,16 @@
 <body>
   <div class="container bg_animate">
     <div id="root">
-      <header> <!-- imagen Pokémon -->
+      <header class="headerPokemon"> <!-- imagen Pokémon -->
         <img src="https://1000marcas.net/wp-content/uploads/2020/01/Logo-Pokemon-500x313.png" alt="Logo de la página">
       </header>
 
       <nav class="nav">
+        <div>
+          <label class="Selector">Ordenar nombres:</label>
+        <button class="typeBtn" id="ordenAscendente">Ascendente A-Z</button>
+        <button class="typeBtn" id="ordenDescendente">Descendente Z-A</button> 
+        </div>
         <div class="filter-buttons">
           <label class="Selector">Selecciona un tipo:</label>
           <select id="typeSelector" class="typeSelector">
@@ -40,13 +45,10 @@
             <option value="steel">Steel</option>
           </select>
         </div>
-        <button id="filtrarAZ">Filtrar A-Z</button>
-        <button id="filtrarZA">Filtrar Z-A</button>
-        
       </nav>
     </div>
-  
-   
+
+
 
     <div id="listPokemon" class="pokemonList"> </div>
 
