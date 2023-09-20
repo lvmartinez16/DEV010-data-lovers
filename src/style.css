@@ -1,59 +1,82 @@
-/* DOM*/
+/* DOM
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, rgb(2, 107, 226), rgb(60, 102, 186), #1fc2fe, #1fc2fe, rgb(58, 107, 197), rgb(0, 132, 248));
-    ;
+    background: linear-gradient(to right, #6bbded, #e2efb6, #ffffff, #e1ecab, #eceef2, #6bbded);
 }
+.container {
+    text-align: center;
+   
+}
+.headerPokemon {
+    text-align: center;
+}
+
+.headerPokemon img {
+    max-width: 250px;
+}
+.footer{  
+    margin-top:20px;
+    width:100%;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 13px 13px 0 0;
+    color: rgb(0, 0, 0);
+    font-family: 'Verdana', sans-serif;
+    background: linear-gradient(to right, #6bbded, #c7df78, #ffffff, #e1ecab, #eceef2, #6bbded);
+    white-space: nowrap;
+    text-transform: capitalize;
+    text-align: center;
+}
+h1{
+    font-family: 'Verdana', sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #6bbded, #c7df78, #ffffff, #e1ecab, #eceef2, #6bbded);
+    color: #282824;
+}
+
+
+.footer2{
+    margin-top: 66px;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 700;
+    border-radius: 13px 13px 0 0;
+    color: #21211f;
+    font-family: 'Verdana', sans-serif;
+    background: linear-gradient(to right, #6bbded, #c7df78, #ffffff, #e1ecab, #eceef2, #6bbded);
+    /* white-space: nowrap; */
+    /* text-transform: capitalize; */
+    text-align: center;
+}
+
 .pokemonList {
     display: flex;
     gap: 15px;
     justify-content: center;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 50px;
+    padding: 20px;
     margin: 13px;
-    /* justify-content: space-between; */
-    /* margin-bottom: 60px; */
     flex-direction: row;
     flex-wrap: wrap;
     align-content: space-between;
 }
-
-.bg_animate {
-   
-    text-align: center;
-
-}
-
+/* ubicacion de filtros */
 .nav {
-    border: 3px solid #034197;
+    
+    /* border: 3px solid #008bfc; */
+    border: 3px solid #008bfc;
+    /* background: linear-gradient(to right, #6bbded, #c7df78, #ffffff, #e1ecab, #eceef2, #6bbded); */
     border-radius: 13px;
-    color: antiquewhite;
- 
+    color: #444;
+    
 }
-
-.banner_img img {
-    width: 80%;
-    /* display: block; */
-}
-
-/* .container {
-    display: grid;
-} */
-
-/* 
-.root {
-    text-align: center;
-    justify-self: center;
-} */
-
-
 
 .tarjetaPokemon {
     width: 250px;
@@ -61,19 +84,17 @@ body {
     border-radius: 13px;
     text-align: center;
     height: 350px;
-    /* position: relative; */
-    background-image: url('/src/assets/tarjetafondo2.jpg');
+     background-image: url('tarjetafondo2.jpg'); 
+    /* background-image: url('src/assets/tarjetafondo2'); */
     background-size: 250px;
-    /* background-repeat: no-repeat; */
-    /* overflow: hidden; */
-    /* box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2); */
     cursor: inherit;
     transition: all 400ms ease-out;
-
+/* tarjeta */
     @media (max-width: 1026px) {
-        width: 550px;
-        background-size: 550px;
-        height: 700px;
+        width: 500px;
+        background-size: 500px;
+        height: 600px;
+      
     }
 }
 
@@ -83,9 +104,8 @@ body {
 }
 
 .namePokemon {
-    /* display: block; */
     font-size: 20px;
-    font-weight: 750;
+    font-weight: 700;
     border-radius: 13px 13px 0 0;
     color: rgb(255, 255, 255);
     font-family: 'Verdana', sans-serif;
@@ -95,11 +115,19 @@ body {
     white-space: nowrap;
     text-transform: capitalize;
     @media(max-width:1026px) {
-        font-size: 50px;
-        font-weight: 750;
+        font-size: 30px;
+        font-weight: 500;
     }
 }
 
+.generacion{
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    font-family: 'Verdana', sans-serif;
+    padding: 13px 32px;
+
+}
 
 .imgpokemon {
     width: 100%;
@@ -108,21 +136,14 @@ body {
     border-radius: 10px;
     transform: translateY(112px);
    
-    
 }
 @media (max-width:1026px) {
     .imgpokemon img{
-        width: 60%;
+        width: 50%;
+      
     }
-    .imgpokemon{
-        transform: translateY(900%);
-    }
+  
 }
-
-/* @media (maxWidth: 1024px) {
-    .tarjetaPokemon{
-    }
-} */
 
 .card-back {
     background-color: rgb(0, 0, 0);
@@ -135,11 +156,12 @@ body {
     opacity: 0;
     margin-top: 47%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 11px;
+    font-size: 13px;
+    border-radius: 6px;
     @media(max-width:1026px) {
-        
-        margin-top: 50%;
-        font-size: 30px;
+            font-size: 30px;
+            margin-top: 50%;
+            font-size: 22px;
     }
 }
 
@@ -158,135 +180,130 @@ body {
 .card-front:hover .imgpokemon img, .card-front:active {
     width: 60%;
      @media(max-width:1026px) {
-       width: 80%;
+       width: 50%;
     }
 }
 
 .card-type {
     margin-top: 10px;
-    /* text-transform: capitalize; */
-   
-        
-    
+  
 }
 
 .card-type a {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 14px;
-    text-transform: capitalize; 
     padding-right: 5px;
     padding-left: 5px;
     border-radius: 10px;
     color: white;
-    font-weight: 800;
+    font-weight: 500;
     text-transform: uppercase; 
 
     @media(max-width:1026px) {
-        font-size: 30px; 
-        padding-right: 10px;
-        padding-left: 10px;
+        font-size: 20px; 
+       
       } 
 }
 
 a.type-grass {
-    background-color: rgb(0, 255, 0);
-    color: rgb(255, 255, 255);
+    background-color: #40ff66;
+    color: #ffffff;
 
 }
 
 a.type-fire {
-    background-color: rgb(255, 0, 0);
+    background-color: #db2721;
     color: rgb(255, 255, 255);
 
 }
 
 a.type-water {
-    background-color: rgb(0, 0, 255);
+    background-color: #114f82;
     color: rgb(255, 255, 255);
 }
 
 a.type-electric {
-    background-color: rgb(255, 244, 44);
+    background-color: #d9eb3b;
     color: rgb(255, 255, 255);
 }
 
 a.type-psychic {
-    background-color: rgb(255, 0, 255);
+    background-color: #8d4ca8;
     color: rgb(255, 255, 255);
 }
 
 a.type-ice {
-    background-color: rgb(73, 199, 224);
+    background-color: #8ad3ed;
     color: rgb(255, 255, 255);
 }
 
 a.type-bug {
-    background-color: rgb(38, 90, 49);
+    background-color: #2bb545;
     color: rgb(255, 255, 255);
 }
 
 a.type-rock {
-    background-color: rgb(115, 57, 6);
+    background-color: #733906;
     color: rgb(255, 255, 255);
 }
 
 a.type-ghost {
-    background-color: rgb(121, 102, 183);
+    background-color: #420b1c;
     color: rgb(255, 255, 255);
 }
 
 a.type-dragon {
-    background-color: rgb(123, 201, 243);
+    background-color: #4cb8d9;
     color: rgb(255, 255, 255);
 }
 
 a.type-dark {
-    background-color: rgb(85, 11, 105);
+    background-color: #550b69;
     color: rgb(255, 255, 255);
 }
 
 a.type-fairy {
-    background-color: rgb(255, 10, 116);
+    background-color: #ff0a74;
     color: rgb(255, 255, 255);
 }
 
 a.type-steel {
-    background-color: rgba(117, 228, 210, 0.83);
+    background-color: #75e4d2d4;
     color: rgb(255, 255, 255);
 }
 
 a.type-normal {
-    background-color: rgb(227, 164, 206);
+    background-color: #737d75;
     color: rgb(255, 255, 255);
 }
 
 a.type-fighting {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background-color: #D35400;
+    color: rgb(255, 255, 255);
 }
 
 a.type-flying {
-    background-color: rgb(255, 155, 79);
+    background-color: #ff9b4f;
     color: rgb(255, 255, 255);
 }
 
 a.type-poison {
-    background-color: rgb(105, 5, 90);
+    background-color: #8c4160;
     color: rgb(255, 255, 255);
     
 }
 
 a.type-ground {
-    background-color: rgb(223, 168, 107);
+    background-color: #dfa86b;
     color: rgb(255, 255, 255);
 }
 
-/* Estilos para el contenedor de las tarjetas */
+/* Estilos para el contenedor de las tarjetas
 .tarjetas-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
+} */
 
 /* Estilo para el botón "Volver arriba" con imagen */
 .btn-volver-arriba {
@@ -315,15 +332,27 @@ a.type-ground {
     /* Ajusta el tamaño de la imagen para llenar el botón */
     transition: transform 0.3s ease;
     /* Agrega una transición de transformación para efectos visuales */
+    @media(max-width:1026px) {
+        transition: transform 0.1s ease;
+    }
 }
 
 .btn-volver-arriba:hover img {
     transform: scale(1.1);
     /* Aplica un efecto de escala al hacer hover en la imagen */
+@media(max-width:1026px) {
+    transform: scale(1.0);
+}
+}
+.Selector{
+    font-size: 15px;
+    font-family: 'Verdana', sans-serif;
+    @media(max-width:1026px) {
+        font-size:30px;
+    }
 }
 
 .typeSelector {
-
     font-size: 16px;
     font-family: 'Verdana', sans-serif;
     color: #444;
@@ -332,7 +361,7 @@ a.type-ground {
     box-sizing: border-box;
     margin: 7px auto;
     appearance: none;
-    border: solid 2px #034197;
+    border: 2px solid #008bfc;
     border-radius: 0.3em;
     background-color: #fff;
     background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E), linear-gradient(to bottom, #ffffff 0%,#f7f7f7 100%);
@@ -340,17 +369,15 @@ a.type-ground {
     background-position: right 0.7em top 50%, 0 0;
     background-size: 0.65em auto, 100%;
     @media(max-width:1026px) {
-        font-size:24px;}
-}
-.Selector{
-    font-size: 20px;
-    font-family: 'Verdana', sans-serif;
-    @media(max-width:1026px) {
-        font-size:40px;
+        font-size:24px;
+           
+        
+        
+        
     }
 }
-.typeBtn {
 
+.typeBtn {
     font-size: 16px;
     font-family: 'Verdana', sans-serif;
     color: #444;
@@ -359,10 +386,19 @@ a.type-ground {
     box-sizing: border-box;
     margin: 7px auto;
     appearance: none;
-   border: solid 2px #034197;
+    border: 2px solid #008bfc;
     border-radius: 0.3em;
-    background-color: #fff;
+    background-color: #fff; 
    
     @media(max-width:1026px) {
         font-size:24px;}
 }
+
+/* canvas{
+    width: 500px;
+    max-width: 500px;
+    display: block;
+    height: 300px; 
+    text-transform: uppercase; 
+    
+} */

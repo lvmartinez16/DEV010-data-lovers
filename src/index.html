@@ -3,26 +3,22 @@
 
 <head>
   <meta charset="utf-8">
-  <title>DATA-LOVER</title>
+  <title>DATALOVERS</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="https://icon-library.com/images/icon-pokemon/icon-pokemon-7.jpg" type="image/x-icon">
 </head>
 
 <body>
-  <div class="container bg_animate">
+  <div class="container ">
     <div id="root">
       <header class="headerPokemon"> <!-- imagen Pokémon -->
         <img src="https://1000marcas.net/wp-content/uploads/2020/01/Logo-Pokemon-500x313.png" alt="Logo de la página">
       </header>
 
       <nav class="nav">
-        <div>
-          <label class="Selector">Ordenar nombres:</label>
-        <button class="typeBtn" id="ordenAscendente">Ascendente A-Z</button>
-        <button class="typeBtn" id="ordenDescendente">Descendente Z-A</button> 
-        </div>
+
         <div class="filter-buttons">
-          <label class="Selector">Selecciona un tipo:</label>
+          <label class="Selector">Select type:</label>
           <select id="typeSelector" class="typeSelector">
             <option value="all">Show all</option>
             <option value="bug">Bug</option>
@@ -45,16 +41,23 @@
             <option value="steel">Steel</option>
           </select>
         </div>
+        <div>
+
+          <button class="typeBtn" id="asc"> A-Z</button>
+          <button class="typeBtn" id="des"> Z-A</button>
+          <button class="typeBtn" id="btnEst" onclick="location.href = 'est.html'"> Estadistic </button>
+
       </nav>
     </div>
 
 
-
     <div id="listPokemon" class="pokemonList"> </div>
 
-    <!-- <div class="loader" id="loader"></div> -->
+
+
 
     <!-- Botón "Volver arriba" -->
+
     <button id="btnVolverArriba" class="btn-volver-arriba">
       <img src="https://cdn.icon-icons.com/icons2/851/PNG/512/Pokemon_Go_Arrow_icon-icons.com_67522.png"
         alt="Icono Volver Arriba">
@@ -63,6 +66,7 @@
 
 
   </div>
+  <footer class="footer"> Lizeth Vanessa Martínez - Laboratoria </footer>
   <script src="data.js" type="module"></script>
   <script src="main.js" type="module"></script>
 </body>

@@ -1,45 +1,22 @@
-import { cargarTipo } from './data.js';
+import { cargarTipo, ordenarAZ, ordenarZA } from './data.js';
 import data from './data/pokemon/pokemon.js';
-
+//console.log("cantidad tarjetas", data);
 //se obtiene elemn ID listPokemon' que esta en el html
 const listPokemon = document.getElementById('listPokemon');
-cargaInicial(data, listPokemon);
 
-// Obtén los botones de ordenamiento por ID
-const btnAscendente = document.getElementById('ordenAscendente');
-const btnDescendente = document.getElementById('ordenDescendente');
-
-// Agrega event listeners a los botones
-btnAscendente.addEventListener('click', () => ordenarPokemonAZ());
-btnDescendente.addEventListener('click', () => ordenarPokemonZA());
-
-function ordenarPokemonAZ() {
-  data.pokemon.sort((a, z) => a.name.localeCompare(z.name));
-  cargaInicial(data, listPokemon);
-}
-
-function ordenarPokemonZA() {
-  data.pokemon.sort((a, b) => b.name.localeCompare(a.name));
-  cargaInicial(data, listPokemon);
-}
-
-function cargaInicial(dataComplete, pokemonListDiv) {
-  const pokemonDivs = dataComplete.pokemon.map(pokemon => {
+function cargaInicial(datA, pokemonListDiv) {
+  const pokemonDivs = datA.map(pokemon => {
     let divType = ``;
     pokemon.type.forEach(type => {
-      divType += `<a class="type-${type}">${type}</a>`;
+      divType += `<a class="type-${type}">${type} </a>`;
     });
+
     const pokemonDiv = document.createElement('div');
     pokemonDiv.className = 'tarjetaPokemon';
     pokemonDiv.innerHTML =
-      `<div class="card-front"><a class="namePokemon">${pokemon.name}</a>
-        <div class="card-type">${divType}</div>
-        <div class="imgpokemon"><img src="${pokemon.img}" alt=""></div>
-        <div><div class="card-back">
-        <div class="card-description">
-        <p>${pokemon.about}</p></div>
-        </div>`;
+      `<div class="card-front"><a class="namePokemon">${pokemon.name}</a><div class="card-type">${divType}</div><div class="imgpokemon"><img src="${pokemon.img}" alt=""></div><div><div class="card-back"><div class="card-description"><p>${pokemon.about}</p> <divclass"generacion"><p class"generacion">Generation: ${pokemon.generation.name}</p></divclass></div></div>`;
     return pokemonDiv;
+
   });
 
   pokemonListDiv.innerHTML = '';
@@ -47,37 +24,53 @@ function cargaInicial(dataComplete, pokemonListDiv) {
     pokemonListDiv.appendChild(pokemonDiv);
   });
 }
-
+cargaInicial(data.pokemon, listPokemon);
+let prueba = [];
 
 window.addEventListener('change', changeSelect);
 function changeSelect() {
   const valueFilter = document.getElementById('typeSelector').value;
   //  console.log("value---->>>>", valueFilter);
   if (valueFilter !== 'all') {
-    const pokemonFilter = cargarTipo(data, valueFilter);
-    listPokemon.innerHTML = '';
-    pokemonFilter.forEach(pokemon => {
-      let divType = '';
-      pokemon.type.forEach(type => {
-        divType += `<a class="type-${type}">${type}</a>`;
-      });
-      const pokemonDiv = document.createElement('div');
-      pokemonDiv.className = 'tarjetaPokemon';
-      pokemonDiv.innerHTML =
-        `<div class="card-front"><a class="namePokemon">${pokemon.name}</a>
-        <div class="card-type">${divType}</div>
-        <div class="imgpokemon"><img src="${pokemon.img}" alt=""></div>
-        <div><div class="card-back">
-        <div class="card-description">
-        <p>${pokemon.about}</p></div>
-        </div>`;
-      listPokemon.appendChild(pokemonDiv);
-    });
+    const pokemonFilter = cargarTipo(data.pokemon, valueFilter);
+    prueba = pokemonFilter;
+    //console.log("cuantos", prueba);
+    cargaInicial(pokemonFilter, listPokemon);
+    //console.log("filtrado type", cargaInicial);
   } else {
-    cargaInicial(data, listPokemon);
+    prueba = []; // Reiniciar la variable prueba
+    cargaInicial(data.pokemon, listPokemon);
+    //console.log("cargaInicial", cargaInicial);
   }
-} cargaInicial(data, listPokemon); // Llama a cargaInicial al cargar la página 
+}
 
+const asc = document.getElementById('asc');
+asc.addEventListener('click', () => {
+  if (prueba.length === 0) {
+    const dataAsc = ordenarAZ(data.pokemon);
+    cargaInicial(dataAsc, listPokemon);
+    // console.log("filtrado A-Z-1", cargaInicial);
+  } else {
+    const dataAsc = ordenarAZ(prueba);
+    cargaInicial(dataAsc, listPokemon);
+    // console.log("filtrado Z-A-2", cargaInicial);
+  }
+});
+
+
+const des = document.getElementById('des');
+des.addEventListener('click', () => {
+  if (prueba.length === 0) {
+    const dataDes = ordenarZA(data.pokemon)
+    cargaInicial(dataDes, listPokemon);
+    //  console.log("filtrado Z-A-1", cargaInicial);
+  } else {
+    const dataDes = ordenarZA(prueba)
+    cargaInicial(dataDes, listPokemon);
+    //console.log("filtrado Z-A-2", cargaInicial);
+  }
+  //  console.log(dataAsc, prueba);
+});
 
 
 /* BOTON SUBIR */
