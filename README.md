@@ -26,3 +26,4 @@ Los usuarios pueden hacer clic en un botón dedicado para obtener información g
 
 # Demo
 [![DEMO.gif](https://i.postimg.cc/ZKSs8Gph/DEMO.gif)](https://postimg.cc/7bKNDQKB)
+[![cel.gif](https://i.postimg.cc/fbkpk10Q/cel.gif)](https://postimg.cc/WDLXHWn5)
