@@ -20,7 +20,8 @@ Se agrega una funcionalidad especial para mostrar estadísticas visuales de los 
 Los usuarios pueden hacer clic en un botón dedicado para obtener información gráfica sobre cuántos Pokémon pertenecen a esta generación y cómo se distribuyen según su tipo.
 
 ### Prototipo de baja fidelidad
-[url=https://postimg.cc/qgy2wJPf][img]https://i.postimg.cc/qgy2wJPf/Whats-App-Image-2023-09-21-at-11-17-46-AM-1.jpg[/img][/url]
+[![Whats-App-Image-2023-09-21-at-11-17-46-AM-1.jpg](https://i.postimg.cc/XNDxVXxv/Whats-App-Image-2023-09-21-at-11-17-46-AM-1.jpg)](https://postimg.cc/qgy2wJPf)
+[![Whats-App-Image-2023-09-21-at-11-17-46-AM.jpg](https://i.postimg.cc/zv1hBZL0/Whats-App-Image-2023-09-21-at-11-17-46-AM.jpg)](https://postimg.cc/KkJjqWDM)
 
 # Demo
 [![DEMO.gif](https://i.postimg.cc/ZKSs8Gph/DEMO.gif)](https://postimg.cc/7bKNDQKB)
