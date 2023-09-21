@@ -26,7 +26,9 @@ Los usuarios pueden hacer clic en un botón dedicado para obtener información g
 
 [![Whats-App-Image-2023-09-21-at-11-21-38-AM.jpg](https://i.postimg.cc/qqRT2gCR/Whats-App-Image-2023-09-21-at-11-21-38-AM.jpg)](https://postimg.cc/7GpdkH98)
 
-# Demo desde computador y celular
+# Demo desde computador
 
 [![DEMO.gif](https://i.postimg.cc/ZKSs8Gph/DEMO.gif)](https://postimg.cc/7bKNDQKB)
+
+# Demos desde celular
 [![cel.gif](https://i.postimg.cc/fbkpk10Q/cel.gif)](https://postimg.cc/WDLXHWn5)
