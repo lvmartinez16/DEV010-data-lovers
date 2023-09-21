@@ -30,5 +30,5 @@ Los usuarios pueden hacer clic en un botón dedicado para obtener información g
 
 [![DEMO.gif](https://i.postimg.cc/ZKSs8Gph/DEMO.gif)](https://postimg.cc/7bKNDQKB)
 
-# Demos desde celular
+# Demo desde celular
 [![cel.gif](https://i.postimg.cc/fbkpk10Q/cel.gif)](https://postimg.cc/WDLXHWn5)
