@@ -18,7 +18,6 @@ export const tiposKanto = (data) => {
 }
 
 
-
 export const ordenarAZ = (data) => {
   const ordenar = data.sort((a, z) => a.name.localeCompare(z.name));
   return ordenar;

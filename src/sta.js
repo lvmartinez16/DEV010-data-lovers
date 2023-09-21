@@ -29,7 +29,7 @@ new Chart('myChartKanto', {
       display: true,
       text: 'Generation Kanto',
       fontSize: 30, // Personaliza el tamaño de la fuente del título
-      fontColor: 'black', // Cambia el color del texto del título a blanco (debe ser un string)
+      fontColor: 'hellow', // Cambia el color del texto del título a blanco (debe ser un string)
       backgroundColor: 'rgb(40, 40, 36, 1)',
       padding: 10, // Agregado para espaciar el texto del título del gráfico
       position: 'top', // Puedes ajustar la posición del título (top, bottom, left, right)
