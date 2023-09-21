@@ -3,7 +3,7 @@ Este proyecto combina de manera efectiva la pasión por Pokémon con la capacida
 
 Además, la interactividad y la capacidad de filtrar y ordenar hacen que esta aplicación sea una herramienta valiosa tanto para los fanáticos casuales como para aquellos que desean profundizar en el análisis de datos de Pokémon. En resumen, el proyecto DataLovers - Tarjetas Pokémon proporciona una experiencia inmersiva y educativa para los amantes del mundo de Pokémon.
 
-####Tarjetas Pokémon Interactivas:
+###Tarjetas Pokémon Interactivas:
 
 La aplicación presenta tarjetas Pokémon en formato visual atractivo.
 Al pasar el cursor sobre una tarjeta, se realiza una animación de giro para revelar información adicional sobre el Pokémon, como estadísticas clave, habilidades y tipos.
@@ -22,7 +22,6 @@ Los usuarios pueden hacer clic en un botón dedicado para obtener información g
 
 **Table of Contents**
 
-[TOCM]
 
 [TOC]
 
