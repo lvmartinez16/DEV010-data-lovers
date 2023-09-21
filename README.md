@@ -20,9 +20,6 @@ Se agrega una funcionalidad especial para mostrar estadísticas visuales de los 
 Los usuarios pueden hacer clic en un botón dedicado para obtener información gráfica sobre cuántos Pokémon pertenecen a esta generación y cómo se distribuyen según su tipo.
 
 
-**Table of Contents**
-
-[TOCM]
 
 # Demo
 [![DEMO.gif](https://i.postimg.cc/ZKSs8Gph/DEMO.gif)](https://postimg.cc/7bKNDQKB)
