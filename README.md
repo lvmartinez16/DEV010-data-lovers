@@ -21,8 +21,6 @@ Se incorpora la capacidad de ordenar las tarjetas Pokémon de manera ascendente 
 Se agrega una funcionalidad especial para mostrar estadísticas visuales de los Pokémon de la generación Kanto.
 Los usuarios pueden hacer clic en un botón dedicado para obtener información gráfica sobre cuántos Pokémon pertenecen a esta generación y cómo se distribuyen según su tipo.
 
-#Demo
-[![DEMO.gif](https://i.postimg.cc/ZKSs8Gph/DEMO.gif)](https://postimg.cc/7bKNDQKB)
 
 ### Prototipo de baja fidelidad
 
